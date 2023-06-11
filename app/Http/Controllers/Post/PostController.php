@@ -15,8 +15,8 @@ class PostController extends Controller
     use Media;
     public function showCreatePost()
     {
-        $client=$_SESSION['client'];
-        return view('admin.dashboard.Timeline.assets-timeline.showCreatePost',compact('client'));
+        $client = $_SESSION['client'];
+        return view('admin.dashboard.Timeline.assets-timeline.showCreatePost', compact('client'));
     }
     public function storePost(Request $request)
     {
@@ -43,7 +43,7 @@ class PostController extends Controller
         return view('admin.Dashboard.Timeline.assets-timeline.Comment-page', with([
             'posts' => $posts,
             'comments' => $comments,
-            'client'=>$_SESSION['client']
+            'client' => $_SESSION['client']
 
         ]));
     }
@@ -61,5 +61,11 @@ class PostController extends Controller
     public function showSearch()
     {
         return view('admin.Dashboard.Timeline.assets-timeline.search-result');
+    }
+
+    public function delete_post($id)
+    {
+        Post::where('id', $id)->first()->delete();
+        return redirect()->route('dashboard');
     }
 }

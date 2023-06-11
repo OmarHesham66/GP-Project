@@ -55,6 +55,8 @@ Route::group(['middleware' => 'Are_You_Login?'], function () {
         Route::get('dashboard/main2', [PostController::class, 'storeComment'])->name('storeComment');
         Route::get('get/comments/{id}', [PostController::class, 'getComments'])->name('getComments');
         Route::get('get/search', [PostController::class, 'showsearch'])->name('search');
+        Route::get('delete/post/{id}', [PostController::class, 'delete_post'])->name('delete-post');
+
     });
 
 
