@@ -70,7 +70,9 @@ a {
 }
 
 img {
-    max-width: 100%;
+    max-width: 55%;
+    border-radius: 30px;
+    left: 50%;
     height: auto;
 }
 

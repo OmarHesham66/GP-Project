@@ -49,12 +49,12 @@ class NitritionController extends Controller
     public function insert_user_data()
     {
         $data_user = Session::get('data_user');
-        $defultImage='21372076.jpg';
-       $password = encrypt($data_user['password']);
+        $defultImage = '21372076.jpg';
+        //    $password = encrypt($data_user['password']);
         $new_user = User::create([
             'name' => $data_user['name'],
             'email' => $data_user['email'],
-            'password' => $password,
+            'password' => $data_user['password'],
             'phone' => $data_user['phone'],
             'age' => $data_user['age'],
             'photo' => $defultImage
@@ -90,12 +90,12 @@ class NitritionController extends Controller
     {
         $client = $_SESSION['client'];
         $nutrition_system = new NutritionSystem(new ClassesNutrition(), $client);
-//        return $nutrition_system->Build();
-        $data=$nutrition_system->Build();
-//        dd($data[1]['compontent_meal'][0]);
-        return view('admin.Nutrition.nutrition',with([
-            'client'=>$client,
-            'data'=>$data
+        //        return $nutrition_system->Build();
+        $data = $nutrition_system->Build();
+        //        dd($data[1]['compontent_meal'][0]);
+        return view('admin.Nutrition.nutrition', with([
+            'client' => $client,
+            'data' => $data
         ]));
     }
 }
