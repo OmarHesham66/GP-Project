@@ -12,14 +12,21 @@ trait GetExerciseType
     {
         $exercises = $data;
         switch ($number_days) {
-                 case '2':
-                     return
-                         [
-                             $days[0] => [$exercises['shoulder'], $exercises['chest'], $exercises['triceps']],
-                             $days[1] => [$exercises['back'], $exercises['biceps'],$exercises['leg'], $exercises['abs']],
+            case '1':
+                return
+                    [
+                        $days[0] => [$exercises['shoulder'], $exercises['chest'], $exercises['triceps'], $exercises['back'], $exercises['biceps'], $exercises['leg'], $exercises['abs']],
 
-                         ];
-                     break;
+                    ];
+                break;
+            case '2':
+                return
+                    [
+                        $days[0] => [$exercises['shoulder'], $exercises['chest'], $exercises['triceps']],
+                        $days[1] => [$exercises['back'], $exercises['biceps'], $exercises['leg'], $exercises['abs']],
+
+                    ];
+                break;
             case '3':
                 return
                     [
