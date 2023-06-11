@@ -1,0 +1,5 @@
+<?php
+if(!defined('OVER_CALORIES_TO_BUILD_MACLE')) {
+    define('OVER_CALORIES_TO_BUILD_MACLE', 500);
+}
+    define('LESS_CALORIES_TO_BUILD_MACLE',500);
