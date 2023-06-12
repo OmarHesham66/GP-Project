@@ -169,5 +169,5 @@ document.getElementById("fileInput").addEventListener("change", function () {
 });
 
 document.getElementById("div_btn").addEventListener("click", function () {
-    document.getElementById("fileButton").click();
+    document.getElementById("Button").click();
 });

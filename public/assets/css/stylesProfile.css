@@ -121,7 +121,7 @@ img {
 .nav__mask {
   width: 80px;
   height: 80px;
-  background: linear-gradient(224deg, #e92f2f -2%, #feaaaa 97%);
+  /*background: linear-gradient(224deg, #e92f2f -2%, #feaaaa 97%);*/
   border-radius: 1.5rem;
   overflow: hidden;
   display: flex;
@@ -488,7 +488,7 @@ position: relative;
 .post__img{
   width: 40px;
   height: 40px;
-  background: linear-gradient(224deg, #e92f2f -2%, #feaaaa 97%);
+  /*background: linear-gradient(224deg, #e92f2f -2%, #feaaaa 97%);*/
   border-radius: 50%;
   overflow: hidden;
   display: flex;
@@ -843,7 +843,7 @@ position: relative;
 .profile__mask{
   width: 140px;
   height: 140px;
-  background: linear-gradient(224deg, #e92f2f -2%, #feaaaa 97%);
+  /*background: linear-gradient(224deg, #e92f2f -2%, #feaaaa 97%);*/
   border-radius: 1.5rem;
   overflow: hidden;
   display: flex;
