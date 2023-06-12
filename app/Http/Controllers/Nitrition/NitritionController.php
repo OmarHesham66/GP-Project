@@ -49,7 +49,7 @@ class NitritionController extends Controller
     public function insert_user_data()
     {
         $data_user = Session::get('data_user');
-        $defultImage = '21372076.jpg';
+        $defultImage = 'Profile-PNG-File.png';
         //    $password = encrypt($data_user['password']);
         $new_user = User::create([
             'name' => $data_user['name'],
@@ -65,12 +65,15 @@ class NitritionController extends Controller
     public function insert_workout_data($id)
     {
         $data_workout = Session::get('data_workout');
+        $data_workout2 = Session::get('data_workout2');
 
         if ($data_workout['gender'] == 'male') {
             $gender = 1;
         } else {
             $gender = 0;
         }
+        $arr = $data_workout2['workout_days'];
+        $days = implode('-', $arr);
 
         WorkoutData::create([
             'height' => $data_workout['height'],
@@ -78,10 +81,10 @@ class NitritionController extends Controller
             'gender' => $gender,
             'activity_rate' => $data_workout['activity_rate'],
             'exercise_level' => $data_workout['exercise_level'],
-            //            'workout_place' => $req->workout_place,
-            //            'workout_days' => $req->workout_days,
-            //            'workout_tools' => $req->workout_tools,
-            //            'number_of_Days' => $req->number_of_days,
+            'workout_place' =>$data_workout2['workout_place'],
+            'workout_days' => $days,
+            'workout_tools' => $data_workout2['workout_tools'],
+            'number_of_days' => count($arr),
             'body_fat' => $data_workout['bodyfat'],
             'user_id' => $id
         ]);

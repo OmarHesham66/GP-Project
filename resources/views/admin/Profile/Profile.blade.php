@@ -63,14 +63,9 @@
                 <div class="thinking__line"></div>
                 <div><i class="bx bx-bone input__lock"></i> Your Goal: {{$client->goal}} </div>
                 <div class="thinking__line"></div>
-                <div><i class="bx bx-cookie input__lock"></i> You Calories : {{$client->my_real_calories}} </div>
+                <div><i class="bx bx-cookie input__lock"></i> BMR : {{round($client->bmr)}} </div>
                 <div class="thinking__line"></div>
-                <div><i class="bx bx-cookie input__lock"></i> Protein : {{$client->protein}} g</div>
-                <div class="thinking__line"></div>
-                <div><i class="bx bx-cookie input__lock"></i> Carbs : {{$client->carbs}} kg</div>
-                <div class="thinking__line"></div>
-                <div><i class="bx bx-cookie input__lock"></i> Fats : {{$client->fats}} kg</div>
-                <div class="thinking__line"></div>
+                <div><i class="bx bx-cookie input__lock"></i> BMI : {{round($client->bmi)}} </div>
             </div>
         </div>
 
@@ -136,6 +131,7 @@
 
 
         </div>
+    </div>
 </section>
 @endsection
 
