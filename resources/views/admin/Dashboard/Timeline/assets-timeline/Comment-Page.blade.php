@@ -45,7 +45,7 @@
                             </div>
 
                             <div class="nav__data">
-                                <div class="nav__mask">
+                                <div class="nav__mask" onclick="window.location.href = '{{ route('myprofile')}}' ;">
 
                                     <img src="{{asset('images/user-profile/'.$client->photo)}}" alt="" class="nav__img">
                                 </div>
@@ -58,12 +58,12 @@
 
                             <ul class="nav__list">
                                 <li class="nav__item">
-                                    <a href="#" class="nav__link">
+                                    <a href="{{route('dashboard')}}" class="nav__link">
                                         <i class='bx bxs-home'></i> Home
                                     </a>
                                 </li>
                                 <li class="nav__item">
-                                    <a href="Profile.html" class="nav__link">
+                                    <a href="{{ route('myprofile')}}" class="nav__link">
                                         <i class='bx bxs-user'></i> Profile
                                     </a>
                                 </li>

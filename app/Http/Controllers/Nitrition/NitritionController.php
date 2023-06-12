@@ -73,6 +73,7 @@ class NitritionController extends Controller
             $gender = 0;
         }
         $arr = $data_workout2['workout_days'];
+
         $days = implode('-', $arr);
 
         WorkoutData::create([

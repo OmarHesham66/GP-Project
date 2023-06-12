@@ -79,8 +79,10 @@ img {
 }
 
 .section__height {
-  min-height: 100vh;
-  max-height: auto;
+
+  min-height:100vh ;
+    max-height: auto;
+
 }
 
 /*=============== HEADER Y NAV ===============*/

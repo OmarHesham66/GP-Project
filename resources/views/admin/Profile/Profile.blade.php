@@ -2,6 +2,8 @@
 @section('style-profile')
 <link rel="stylesheet" href="{{asset('assets/css/stylesProfile.css')}}">
 <link href="{{asset('assets/lightbox2-2.11.4/dist/css/lightbox.min.css')}}" rel="stylesheet" />
+<link rel="stylesheet" href="{{asset('assets/css/stylesTimeline.css')}}">
+<link rel="stylesheet" href="{{asset('assets/css/stylesComment.css')}}">
 @endsection
 
 @section('content-profile')

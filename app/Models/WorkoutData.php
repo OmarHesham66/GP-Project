@@ -21,7 +21,7 @@ class WorkoutData extends Model
         'workout_place',
         'workout_days',
         'workout_tools',
-        'number_of_Days',
+        'number_of_days',
     ];
 
     public function users(){

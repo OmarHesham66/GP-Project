@@ -35,31 +35,31 @@ showHiddenInput('input-overlays','input-passs','input-icons')
 
 // validate button 
 
-function validateForm() {
-    let userName = document.getElementById("username").value;
-    let email = document.getElementById("email").value;
-    let phone = document.getElementById("phone").value;
-    let age = document.getElementById("age").value;
-    let pass = document.getElementById("input-pass").value;
-    let passConfirm = document.getElementById("input-passs").value;
+// function validateForm() {
+//     let userName = document.getElementById("username").value;
+//     let email = document.getElementById("email").value;
+//     let phone = document.getElementById("phone").value;
+//     let age = document.getElementById("age").value;
+//     let pass = document.getElementById("input-pass").value;
+//     let passConfirm = document.getElementById("input-passs").value;
   
-    if (userName == "" || email == "" || phone == "" || age == "" || pass == "" || passConfirm == "") {
-      alert("Please fill in all fields");
-      return false;
-    } else if (pass != passConfirm) {
-      alert("Passwords do not match");
-      return false;
-    } else {
-      return true;
-    }
-  }
+//     if (userName == "" || email == "" || phone == "" || age == "" || pass == "" || passConfirm == "") {
+//       alert("Please fill in all fields");
+//       return false;
+//     } else if (pass != passConfirm) {
+//       alert("Passwords do not match");
+//       return false;
+//     } else {
+//       return true;
+//     }
+//   }
   
-  document.querySelector('.login__button').addEventListener('click', function() {
-    if (validateForm()) {
-        window.location.href = '/signup2.html';
+//   document.querySelector('.login__button').addEventListener('click', function() {
+//     if (validateForm()) {
+//         window.location.href = '/signup2.html';
 
-    }
-  });
+//     }
+//   });
 
 
 ////////////////////////////////////////////////////////////////////////////
