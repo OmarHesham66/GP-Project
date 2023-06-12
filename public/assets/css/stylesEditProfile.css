@@ -375,8 +375,8 @@ input[type=number]::-webkit-inner-spin-button{
       width: fit-content;
       color: hsl(0, 67%, 52%);
       position: absolute;
-      top: 31%;
-      left: 53%;
+      top: 27%;
+      left: 60%;
       font-weight: 600;
       font-size: 15px;
   }

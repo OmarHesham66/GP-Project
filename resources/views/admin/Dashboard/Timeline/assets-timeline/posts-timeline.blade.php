@@ -24,6 +24,18 @@
     @foreach ($posts as $post)
     <div class="post__maker main-post post-maker">
         <div class="owner__container">
+            @if ($post->user->id==$client->id)
+            <div class="owner__info">
+                <div class="post__img" onclick="window.location.href = '{{ route('myprofile') }}' ;">
+                    <img src="{{ asset('images/user-profile/'.$post->user->photo) }}" alt="">
+                </div>
+                <div class="owner__name">
+                    <h1 class="user__name" onclick="window.location.href = '{{ route('myprofile') }}' ;">
+                        {{$post->user->name}}</h1>
+                    <p class="time">{{$post->created_at}} </p>
+                </div>
+            </div>
+            @else
             <div class="owner__info">
                 <div class="post__img"
                     onclick="window.location.href = '{{ route('Profile-follow',$post->user->id) }}' ;">
@@ -36,9 +48,7 @@
                     <p class="time">{{$post->created_at}} </p>
                 </div>
             </div>
-            <div class="posts__icons">
-
-            </div>
+            @endif
         </div>
         <div class="posts__content">
             <p>{{$post->text}}</p>
