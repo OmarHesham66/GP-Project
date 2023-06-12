@@ -29,14 +29,14 @@
             <div class="thinking__line"></div>
             <div class="thinking__share">
                 <a id="fileButton" class="photo">
-                    <i class="ri-image-add-fill"></i>
+                <i class='bx bx-image-add'></i>
                     <p>Photo</p>
                 </a>
                 <input type="file" name="media" id="fileInput" style="display: none">
 
 
                 <button class=" post" type="submit">
-                    <i class="ri-share-forward-fill"></i>
+                <i class='bx bxs-share'></i>
                     <p>Post</p>
                 </button>
             </div>

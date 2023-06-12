@@ -41,12 +41,12 @@
         <ul class="nav__list">
             <li class="nav__item">
                 <a href="#" class="nav__link active-link">
-                    <i class="ri-home-4-line"></i> Home
+                <i class='bx bxs-home'></i> Home
                 </a>
             </li>
             <li class="nav__item">
                 <a href="Profile.html" class="nav__link">
-                    <i class="ri-user-line"></i> Profile
+                <i class='bx bxs-user'></i> Profile
                 </a>
             </li>
             <li class="nav__item">
@@ -89,8 +89,8 @@
                     <input type="search" class="search__input" placeholder="Search...">
 
                     <div class="search__button" id="search-button">
-                        <i class="ri-search-2-line search__icon"></i>
-                        <i class="ri-close-line search__close"></i>
+                        <i class='bx bx-search search__icon'></i>
+                        <i class='bx bx-x search__close'></i>
                     </div>
                 </form>
             </div>
@@ -155,11 +155,11 @@
 
                 <div class="thinking__share">
                     <div class="photo">
-                        <i class="ri-image-add-fill"></i>  <p>Photo</p>
+                        <i class='bx bx-image-add'></i>  <p>Photo</p>
                     </div>
 
                     <div class="post">
-                        <i class="ri-share-forward-fill"></i> <p>Post</p>
+                        <i class='bx bxs-share'></i> <p>Post</p>
                     </div>
                 </div>
             </div>
@@ -249,10 +249,10 @@
                 <div class="thinking__line"></div>
                 <div class="posts__reaction">
                     <div class="like" id="like-reaction">
-                        <i class="ri-thumb-up-fill"></i>  <p>Like</p>
+                        <i class='bx bxs-like'></i>  <p>Like</p>
                     </div>
                     <div class="post comment-box">
-                        <i class="ri-chat-3-line"></i> <p>Comment</p>
+                        <i class='bx bx-message-rounded-add'></i> <p>Comment</p>
                     </div>
                 </div>
 
@@ -266,7 +266,7 @@
                         <div class="thinking">
                             <input type="text" class="thinking__input comment__input" placeholder="Write a public comment...">
                             <div class="comment__sender">
-                                <i class="ri-send-plane-2-fill"></i>
+                                <i class='bx bxs-send'></i>
                             </div>
 
                         </div>
@@ -356,11 +356,11 @@
                 </div>
                 <div class="thinking__line"></div>
                 <div class="posts__reaction">
-                    <div class="like" id="like-reaction">
-                        <i class="ri-thumb-up-fill"></i>  <p>Like</p>
+                <div class="like" id="like-reaction">
+                        <i class="bx bxs-like"></i>  <p>Like</p>
                     </div>
                     <div class="post comment-box">
-                        <i class="ri-chat-3-line"></i> <p>Comment</p>
+                        <i class="bx bx-message-rounded-add"></i> <p>Comment</p>
                     </div>
                 </div>
 
@@ -374,7 +374,7 @@
                         <div class="thinking">
                             <input type="text" class="thinking__input comment__input" placeholder="Write a public comment...">
                             <div class="comment__sender">
-                                <i class="ri-send-plane-2-fill"></i>
+                            <i class='bx bxs-send'></i>
                             </div>
 
                         </div>
@@ -466,11 +466,11 @@
                 </div>
                 <div class="thinking__line"></div>
                 <div class="posts__reaction">
-                    <div class="like" id="like-reaction">
-                        <i class="ri-thumb-up-fill"></i>  <p>Like</p>
+                <div class="like" id="like-reaction">
+                        <i class="bx bxs-like"></i>  <p>Like</p>
                     </div>
                     <div class="post comment-box">
-                        <i class="ri-chat-3-line"></i> <p>Comment</p>
+                        <i class="bx bx-message-rounded-add"></i> <p>Comment</p>
                     </div>
                 </div>
 
@@ -484,7 +484,7 @@
                         <div class="thinking">
                             <input type="text" class="thinking__input comment__input" placeholder="Write a public comment...">
                             <div class="comment__sender">
-                                <i class="ri-send-plane-2-fill"></i>
+                            <i class='bx bxs-send'></i>
                             </div>
 
                         </div>
@@ -576,11 +576,11 @@
                 </div>
                 <div class="thinking__line"></div>
                 <div class="posts__reaction">
-                    <div class="like" id="like-reaction">
-                        <i class="ri-thumb-up-fill"></i>  <p>Like</p>
+                <div class="like" id="like-reaction">
+                        <i class="bx bxs-like"></i>  <p>Like</p>
                     </div>
                     <div class="post comment-box">
-                        <i class="ri-chat-3-line"></i> <p>Comment</p>
+                        <i class="bx bx-message-rounded-add"></i> <p>Comment</p>
                     </div>
                 </div>
 
@@ -594,7 +594,7 @@
                         <div class="thinking">
                             <input type="text" class="thinking__input comment__input" placeholder="Write a public comment...">
                             <div class="comment__sender">
-                                <i class="ri-send-plane-2-fill"></i>
+                            <i class='bx bxs-send'></i>
                             </div>
 
                         </div>

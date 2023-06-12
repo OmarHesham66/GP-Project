@@ -287,6 +287,21 @@ img {
   color: var(--first-color);
   text-decoration: none;
 }
+
+.alert-danger1{
+  position: absolute;
+  font-size: 16px;
+  color: hsl(0, 97%, 66%);
+  top: 25%;
+  right: 32px;
+}
+.alert-danger2{
+  position: absolute;
+  font-size: 16px;
+  color: hsl(0, 97%, 66%);
+  top: 50%;
+  right: 30px;
+}
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 

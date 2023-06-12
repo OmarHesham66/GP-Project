@@ -7,7 +7,7 @@
             <input wire:model.defer="comment" type="text" class="thinking__input comment__input"
                 placeholder="Write a public comment...">
             <div id="div_btn" type="submit" wire:click="insert_comment" class="comment__sender">
-                <i class="ri-send-plane-2-fill"></i>
+                <i class='bx bxs-send'></i>
             </div>
         </form>
     </div>

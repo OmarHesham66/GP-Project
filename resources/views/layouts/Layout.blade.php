@@ -51,12 +51,12 @@
             <ul class="nav__list">
                 <li class="nav__item">
                     <a href="{{route('dashboard')}}" class="nav__link">
-                        <i class="ri-home-4-line"></i> Home
+                    <i class='bx bxs-home'></i> Home
                     </a>
                 </li>
                 <li class="nav__item">
                     <a href="{{ route('myprofile')}}" class="nav__link">
-                        <i class="ri-user-line"></i> Profile
+                    <i class='bx bxs-user'></i> Profile
                     </a>
                 </li>
                 <li class="nav__item">
