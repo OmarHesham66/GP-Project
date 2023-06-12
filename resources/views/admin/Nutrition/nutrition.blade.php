@@ -77,7 +77,7 @@
                                                 {{ $data[0][0]['compontent_meal'][$i]->name_compontent_meal}}
                                             </h2>
                                             <div class="ingredient-meal">
-                                                <p>Total weight of the ingredient: {{round( $data[0][0]['compontent_meal'][$i]->weight)}}
+                                                <p>Total weight of the ingredient: {{ceil( $data[0][0]['compontent_meal'][$i]->weight)}}
                                                     {{ $data[0][0]['compontent_meal'][$i]->measruing_unit}}</p>
                                                 <p>Total Calories for the ingredient: {{round($data[0][0]['compontent_meal'][$i]->calories)}} Cal</p>
                                                 <p>Total Proteins in the ingredient: {{ round($data[0][0]['compontent_meal'][$i]->protein)}} g</p>
@@ -88,70 +88,6 @@
                                     </div>
                                 </div>
                             @endfor
-                            <!-- Slide-end -->
-                            {{--                            <!-- Slide-start -->--}}
-                            {{--                            <div class="swiper-slide tranding-slide">--}}
-                            {{--                                <div class="tranding-slide-img">--}}
-                            {{--                                    <img src="assets/img/tranding-food-2.png" alt="Tranding">--}}
-                            {{--                                </div>--}}
-                            {{--                                <div class="tranding-slide-content">--}}
-                            {{--                                    <div class="tranding-slide-content-bottom">--}}
-                            {{--                                        <h2 class="food-name">--}}
-                            {{--                                            Special Pizza--}}
-                            {{--                                        </h2>--}}
-                            {{--                                        <div class="ingredient-meal">--}}
-                            {{--                                            <p>Total weight of the ingredient: 500 g</p>--}}
-                            {{--                                            <p>Total calories for the ingredient: 200 Cal</p>--}}
-                            {{--                                            <p>Total Proteins in the ingredient: 20 g</p>--}}
-                            {{--                                            <p>Total Carbs in the ingredient: 40 g</p>--}}
-                            {{--                                            <p>Total Fats in the ingredient: 20 g</p>--}}
-                            {{--                                        </div>--}}
-                            {{--                                    </div>--}}
-                            {{--                                </div>--}}
-                            {{--                            </div>--}}
-                            {{--                            <!-- Slide-end -->--}}
-                            {{--                            <!-- Slide-start -->--}}
-                            {{--                            <div class="swiper-slide tranding-slide">--}}
-                            {{--                                <div class="tranding-slide-img">--}}
-                            {{--                                    <img src="assets/img/tranding-food-2.png" alt="Tranding">--}}
-                            {{--                                </div>--}}
-                            {{--                                <div class="tranding-slide-content">--}}
-                            {{--                                    <div class="tranding-slide-content-bottom">--}}
-                            {{--                                        <h2 class="food-name">--}}
-                            {{--                                            Special Pizza--}}
-                            {{--                                        </h2>--}}
-                            {{--                                        <div class="ingredient-meal">--}}
-                            {{--                                            <p>Total weight of the ingredient: 500 g</p>--}}
-                            {{--                                            <p>Total calories for the ingredient: 200 Cal</p>--}}
-                            {{--                                            <p>Total Proteins in the ingredient: 20 g</p>--}}
-                            {{--                                            <p>Total Carbs in the ingredient: 40 g</p>--}}
-                            {{--                                            <p>Total Fats in the ingredient: 20 g</p>--}}
-                            {{--                                        </div>--}}
-                            {{--                                    </div>--}}
-                            {{--                                </div>--}}
-                            {{--                            </div>--}}
-                            {{--                            <!-- Slide-end -->--}}
-                            {{--                            <!-- Slide-start -->--}}
-                            {{--                            <div class="swiper-slide tranding-slide">--}}
-                            {{--                                <div class="tranding-slide-img">--}}
-                            {{--                                    <img src="assets/img/tranding-food-2.png" alt="Tranding">--}}
-                            {{--                                </div>--}}
-                            {{--                                <div class="tranding-slide-content">--}}
-                            {{--                                    <div class="tranding-slide-content-bottom">--}}
-                            {{--                                        <h2 class="food-name">--}}
-                            {{--                                            Special Pizza--}}
-                            {{--                                        </h2>--}}
-                            {{--                                        <div class="ingredient-meal">--}}
-                            {{--                                            <p>Total weight of the ingredient: 500 g</p>--}}
-                            {{--                                            <p>Total calories for the ingredient: 200 Cal</p>--}}
-                            {{--                                            <p>Total Proteins in the ingredient: 20 g</p>--}}
-                            {{--                                            <p>Total Carbs in the ingredient: 40 g</p>--}}
-                            {{--                                            <p>Total Fats in the ingredient: 20 g</p>--}}
-                            {{--                                        </div>--}}
-                            {{--                                    </div>--}}
-                            {{--                                </div>--}}
-                            {{--                            </div>--}}
-                            {{--                            <!-- Slide-end -->--}}
                         </div>
 
                         <div class="tranding-slider-control">
@@ -206,7 +142,7 @@
                                                 {{ $data[0][1]['compontent_meal'][$i]->name_compontent_meal}}
                                             </h2>
                                             <div class="ingredient-meal">
-                                                <p>Total weight of the ingredient: {{round( $data[0][1]['compontent_meal'][$i]->weight)}}
+                                                <p>Total weight of the ingredient: {{ceil( $data[0][1]['compontent_meal'][$i]->weight)}}
                                                     {{ $data[0][1]['compontent_meal'][$i]->measruing_unit}}</p>
                                                 <p>Total Calories for the ingredient: {{round($data[0][1]['compontent_meal'][$i]->calories)}} Cal</p>
                                                 <p>Total Proteins in the ingredient: {{ round($data[0][1]['compontent_meal'][$i]->protein)}} g</p>
@@ -272,7 +208,7 @@
                                                 {{ $data[0][2]['compontent_meal'][$i]->name_compontent_meal}}
                                             </h2>
                                             <div class="ingredient-meal">
-                                                <p>Total weight of the ingredient: {{round( $data[0][2]['compontent_meal'][$i]->weight)}}
+                                                <p>Total weight of the ingredient: {{ceil( $data[0][2]['compontent_meal'][$i]->weight)}}
                                                     {{ $data[0][2]['compontent_meal'][$i]->measruing_unit}}</p>
                                                 <p>Total Calories for the ingredient: {{round($data[0][2]['compontent_meal'][$i]->calories)}} Cal</p>
                                                 <p>Total Proteins in the ingredient: {{ round($data[0][2]['compontent_meal'][$i]->protein)}} g</p>
@@ -338,7 +274,7 @@
                                                 {{ $data[1]['compontent_meal'][$i]->name_compontent_meal}}
                                             </h2>
                                             <div class="ingredient-meal">
-                                                <p>Total weight of the ingredient: {{round( $data[1]['compontent_meal'][$i]->weight)}}
+                                                <p>Total weight of the ingredient: {{ceil( $data[1]['compontent_meal'][$i]->weight)}}
                                                     {{ $data[1]['compontent_meal'][$i]->measruing_unit}}</p>
                                                 <p>Total Calories for the ingredient: {{round($data[1]['compontent_meal'][$i]->calories)}} Cal</p>
                                                 <p>Total Proteins in the ingredient: {{ round($data[1]['compontent_meal'][$i]->protein)}} g</p>
