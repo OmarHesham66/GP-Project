@@ -49,6 +49,7 @@
                                 <select required class="input__password input__email" name="workout_tool" id="gender">
                                     <option >Dummble</option>
                                     <option >Bar</option>
+                                    <option value="NULL" >Both</option>
                                 </select>
                             </div>
                         </div>
