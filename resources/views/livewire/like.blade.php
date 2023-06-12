@@ -29,13 +29,28 @@
 
         <div class="comments">
             <p>{{ $counter_comment }} Comment </p>
-            {{-- <div class="comments-container" style="display: none;">
+            <div class="comments-container" style="display: none;">
                 <ul>
-                    {{-- <li>
-                        <p class="user__name">Amr Khaled</p> gamd
-                    </li> --}}
-                    {{-- </ul>
-            </div> --}}
+                    @if (count($comments)!=0)
+                    @foreach ($comments as $comment )
+                    <li>
+                        @if($comment->user->id==$id)
+                        <p class="user__name" onclick="window.location.href = '{{ route('myprofile') }}' ;">
+                            {{$comment->user->name }}</p>
+                        @else
+                        <p class="user__name"
+                            onclick="window.location.href = '{{ route('Profile-follow',$comment->user->id) }}' ;">
+                            {{$comment->user->name }}</p>
+                        @endif
+                    </li>
+                    @endforeach
+                    @else
+                    <li>
+                        <p class="user__name">No Comments Yet</p>
+                    </li>
+                    @endif
+                </ul>
+            </div>
         </div>
     </div>
     <div class="thinking__line"></div>
