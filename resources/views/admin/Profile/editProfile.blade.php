@@ -72,7 +72,7 @@
                                 <div class="input">
                                     <div class="input__overlay" id="input-overlay"></div>
                                     <i class="bx bx-lock-alt input__lock"></i>
-                                    <input type="password" name="password" placeholder="Enter your password" required class="input__password" id="input-pass">
+                                    <input type="password" name="password" placeholder="Enter your password"  class="input__password" id="input-pass">
                                     <i class="bx bx-hide input__icon" id="input-icon"></i>
                                 </div>
                             </div>
@@ -82,7 +82,7 @@
                                 <div class="input">
                                     <div class="input__overlay" id="input-overlays"></div>
                                     <i class="bx bx-lock-alt input__lock"></i>
-                                    <input type="password" name="password_confirmation" placeholder="Re-Enter your password" required class="input__password" id="input-passs">
+                                    <input type="password" name="password_confirmation" placeholder="Re-Enter your password"  class="input__password" id="input-passs">
                                     <i class="bx bx-hide input__icon" id="input-icons"></i>
                                 </div>
                             </div>
