@@ -38,7 +38,7 @@
                         </div>
                         {{-- Error name --}}
                         @error('name')
-                        <h1 class="alert alert-danger" role="alert">
+                        <h1 class="alert-danger1" role="alert">
                             {{$message}}
                         </h1>
                         @enderror
@@ -54,7 +54,7 @@
                         </div>
                         {{-- Error Email --}}
                         @error('email')
-                        <div class="alert alert-danger" role="alert">
+                        <div class="alert-danger2" role="alert">
                             {{$message}}
                         </div>
                         @enderror
@@ -70,7 +70,7 @@
                         </div>
                         {{-- Error phone --}}
                         @error('phone')
-                        <div class="alert alert-danger" role="alert">
+                        <div class="alert-danger3" role="alert">
                             {{$message}}
                         </div>
                         @enderror
@@ -85,7 +85,7 @@
                         </div>
                         {{-- Error Age --}}
                         @error('age')
-                        <div class="alert alert-danger" role="alert">
+                        <div class="alert-danger4" role="alert">
                             {{$message}}
                         </div>
                         @enderror
@@ -102,7 +102,7 @@
                         </div>
                         {{-- Error Password --}}
                         @error('password')
-                        <div class="alert alert-danger" role="alert">
+                        <div class="alert-danger5" role="alert">
                             {{$message}}
                         </div>
                         @enderror

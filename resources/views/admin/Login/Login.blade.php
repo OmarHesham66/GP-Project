@@ -7,6 +7,8 @@
 
     <!--=============== BOX Icons ===============-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- <link rel="stylesheet" href="{{asset('assets/css/normalize.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/all.min.css')}}"> -->
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="{{asset('assets/css/stylesLogin.css')}}">
@@ -22,7 +24,7 @@
             <form action="{{route('post_login')}}" method="post" class="login__form">
                 @csrf
                 @if (isset($error))
-                <div class="alert alert-danger" style="color: red;" role="alert">
+                <div class="alert-danger"  role="alert">
                     {{ $error }}
                 </div>
                 @endif
@@ -47,7 +49,7 @@
                         </div>
                         {{-- Error Email --}}
                         @error('email')
-                        <div class="alert alert-danger" style="color: red;" role="alert">
+                        <div class="alert-danger1" role="alert">
                             {{$message}}
                         </div>
                         @enderror
@@ -64,7 +66,7 @@
                             </div>
                         </div>
                         @error('password')
-                        <div class="alert alert-danger" style="color: red;" role="alert">
+                        <div class="alert-danger2" role="alert">
                             {{$message}}
                         </div>
                         @enderror

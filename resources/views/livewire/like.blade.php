@@ -31,20 +31,20 @@
 
         @if ($like_btn==true)
         <div wire:click="insert_like" class="like" style="color: red" id="like-reaction">
-            <i class="ri-thumb-up-fill"></i>
+        <i class='bx bxs-like'></i>
             <p class="like">like</p>
         </div>
         @endif
 
         @if ($like_btn==false)
         <div wire:click="insert_like" class="like" id="like-reaction">
-            <i class="ri-thumb-up-fill"></i>
+        <i class='bx bxs-like'></i>
             <p class="like">like</p>
         </div>
         @endif
         {{-- ################################################################################### --}}
         <div class="post comment-box">
-            <i class="ri-chat-3-line"></i>
+        <i class='bx bxs-comment-detail'></i>
             <a class="post comment-box" href="{{route('getComments',$post_id)}}">Comment</a>
         </div>
     </div>

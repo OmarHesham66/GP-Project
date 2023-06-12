@@ -44,7 +44,7 @@
                 <input type="text" name="text" wire:model="newComment" wire:keydown.enter="storeComment"
                     class="thinking__input comment__input" placeholder="Write a public comment...">
                 <div class="comment__sender">
-                    <i wire:click.prevent="storeComment" class="ri-send-plane-2-fill"></i>
+                    <i wire:click.prevent="storeComment" class='bx bxs-send'></i>
                 </div>
             </div>
         </div>
@@ -75,7 +75,7 @@
                     placeholder="Write a public comment...">--}}
                 {{-- <div class="comment__sender">--}}
                     {{-- <button wire:click.prevent="storeComment" type="submit"
-                        class="ri-send-plane-2-fill"></button>--}}
+                        class='bx bxs-send'></button>--}}
                     {{-- </div>--}}
                 {{-- </div>--}}
             {{-- </div>--}}

@@ -225,6 +225,44 @@ input[type=number]::-webkit-inner-spin-button{
     cursor: pointer;
     margin-left: 6rem;
 }
+
+.alert-danger1{
+  position: absolute;
+  font-size: 14px;
+  color: hsl(0, 97%, 66%);
+  top: 10%;
+  right: 60px;
+}
+.alert-danger2{
+  position: absolute;
+  font-size: 14px;
+  color: hsl(0, 97%, 66%);
+  top: 23%;
+  right: 60px;
+}
+
+.alert-danger3{
+  position: absolute;
+  font-size: 14px;
+  color: hsl(0, 97%, 66%);
+  top: 36%;
+  right: 60px;
+}
+.alert-danger4{
+  position: absolute;
+  font-size: 14px;
+  color: hsl(0, 97%, 66%);
+  top: 49%;
+  right: 59px;
+}
+
+.alert-danger5{
+  position: absolute;
+  font-size: 12px;
+  color: hsl(0, 97%, 66%);
+  top: 63%;
+  right: 59px;
+}
   
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
