@@ -22,9 +22,9 @@ class ChangeFollowButton extends Component
     {
         $data = $this->get_information_user($this->main_id);
         $posts = Post::where('user_id', '=', $this->main_id)->get();
-        $isFound=true;
-        if(collect($posts)->isEmpty()){
-            $isFound=false;
+        $isFound = true;
+        if (collect($posts)->isEmpty()) {
+            $isFound = false;
         }
         if ($this->check_btn() == true) {
             $this->change_btn = 1;
@@ -32,9 +32,10 @@ class ChangeFollowButton extends Component
             $this->change_btn = 0;
         }
         return view('livewire.change-follow-button', with([
-            'posts'=>$posts,
-            'data'=>$data,
-            'found'=>$isFound
+            'posts' => $posts,
+            'data' => $data,
+            'found' => $isFound,
+            'client' => $this->get_session(),
         ]));
     }
     public function create_follow()

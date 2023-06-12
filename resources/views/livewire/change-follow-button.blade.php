@@ -4,7 +4,8 @@
         <div class="post__maker">
             <div class="profile__container">
                 <div class="profile__mask">
-                    <a href="{{ asset('images/user-profile/'.$data['user']->photo) }}" data-lightbox="image-1" data-title="Profile Picture">
+                    <a href="{{ asset('images/user-profile/'.$data['user']->photo) }}" data-lightbox="image-1"
+                        data-title="Profile Picture">
                         <img class="profile__img" src="{{ asset('images/user-profile/'.$data['user']->photo) }}" alt="">
                     </a>
                 </div>
@@ -37,7 +38,7 @@
                     <h2>posts</h2>
 
                 </a>
-                <a class="followers__count counter" href="{{route('followers')}}">
+                <a class="followers__count counter" href="{{route('following')}}">
                     @if (!isset($data['num_followers']))
                     <h1>0</h1>
                     @else
@@ -45,7 +46,7 @@
                     @endif
                     <h2>followers</h2>
                 </a>
-                <a class="following__count counter" href="{{route('following')}}">
+                <a class="following__count counter" href="{{route('followers')}}">
                     @if (!isset($data['num_following']))
                     <h1>0</h1>
                     @else
@@ -58,7 +59,6 @@
             <div class="thinking__line"></div>
 
         </div>
-{{--        @include('admin.Dashboard.Timeline.assets-timeline.create-post')--}}
         @include('admin.Dashboard.Timeline.assets-timeline.posts-timeline')
     </div>
 </section>

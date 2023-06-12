@@ -26,10 +26,6 @@
                 <small class="user__name">{{ $notification->comment->text }}</small><br>
                 @endif
 
-                @if (isset($info->replay_id))
-                <small class="user__name">{{ $notification->replay->text }}</small><br>
-                @endif
-
                 <small class="user__name">{{ $notification->created_at }}</small>
 
             </li>

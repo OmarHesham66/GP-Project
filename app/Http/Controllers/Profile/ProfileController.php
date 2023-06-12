@@ -80,8 +80,10 @@ class ProfileController extends Controller
             'age' => ['required'],
             'media' => 'mimes:jpeg,png,jpg',
         ]);
-
-        $file_name = $this->editImageProfile($request->media);
+        $file_name='Profile-PNG-File.png';
+        if ($request->media) {
+            $file_name = $this->editImageProfile($request->media);
+        }
         $user = User::where('id', '=', $_SESSION['client']->id)->first();
         $user->update([
             'photo' => $file_name,
@@ -90,6 +92,6 @@ class ProfileController extends Controller
             'email' => $request->email,
             'age' => $request->age,
         ]);
-        return view('admin.Login.Login');
+        return redirect()->route('logout') ;
     }
 }

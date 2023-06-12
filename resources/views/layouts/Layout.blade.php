@@ -51,12 +51,12 @@
             <ul class="nav__list">
                 <li class="nav__item">
                     <a href="{{route('dashboard')}}" class="nav__link">
-                    <i class='bx bxs-home'></i> Home
+                        <i class='bx bxs-home'></i> Home
                     </a>
                 </li>
                 <li class="nav__item">
                     <a href="{{ route('myprofile')}}" class="nav__link">
-                    <i class='bx bxs-user'></i> Profile
+                        <i class='bx bxs-user'></i> Profile
                     </a>
                 </li>
                 <li class="nav__item">
@@ -82,7 +82,7 @@
         <!--=============== HEADER ===============-->
         <header class="header" id="header">
             <nav class="header__nav container">
-                <a href="#" class="header__logo">
+                <a href="{{route('dashboard')}}" class="header__logo">
                     <img src="{{asset('assets/img/favicon.png')}}" alt="logo">
                     <p>FitnessFuelX</p>
                 </a>

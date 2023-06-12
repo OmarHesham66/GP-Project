@@ -4,7 +4,7 @@
             <img src="{{asset('assets/img/favicon.png')}}" alt="">
         </div>
         <form wire:submit.prevent="insert_comment" class="thinking">
-            <input wire:model.defer="comment" type="text" class="thinking__input comment__input"
+            <input wire:model.defer="comment" type="text" required class="thinking__input comment__input"
                 placeholder="Write a public comment...">
             <div id="div_btn" type="submit" wire:click="insert_comment" class="comment__sender">
                 <i class='bx bxs-send'></i>
