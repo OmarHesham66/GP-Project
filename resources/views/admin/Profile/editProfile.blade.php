@@ -127,6 +127,7 @@
              @endforeach
         @endif
         <script src="{{asset('assets/js/create-post.js')}}"></script>
+        <script src="{{asset('assets/js/signs.js')}}"></script>
     </body>
 </html>
 
