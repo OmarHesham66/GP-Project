@@ -44,7 +44,7 @@
           <a href="#tranding-wednesday" class="nav__link">Wednesday</a>
         </li>
         @endif
-        @if($thursday='yes')
+        @if($thursday=='yes')
         <li>
           <a href="#tranding-thursday" class="nav__link">Thursday</a>
         </li>
@@ -73,7 +73,7 @@
             @for ($i=0;$i<$arr_number[$sys->Exercise_Name];$i++ )
               <div class="swiper-slide tranding-slide">
                 <div class="tranding-slide-img">
-                    <video controls src="{{ asset('workout/'.$sys->muscle[$i]->Muscle_Video) }}" alt=""></video>
+                  <video controls src="{{ asset('workout/'.$sys->muscle[$i]->Muscle_Video) }}" alt=""></video>
                 </div>
                 <div class="tranding-slide-content">
                   <div class="tranding-slide-content-bottom">
@@ -286,7 +286,7 @@
     </section>
   </section>
   @endif
-
+  {{-- {{ dd($thursday) }} --}}
   @if ($thursday=='yes')
   <section id="tranding-thursday" class="tranding-section">
     <section id="tranding">

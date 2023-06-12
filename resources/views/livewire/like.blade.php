@@ -5,24 +5,37 @@
             <i class='bx bxs-like'></i> {{ $counter_like }}
             <div class="likes-container" style="display: none;">
                 <ul>
-                    {{-- @foreach ($user_names as $name )
+                    @if (count($likes)!=0)
+                    @foreach ($likes as $like )
                     <li>
-                        <p class="user__name"></p>
+                        @if($like->user->id==$id)
+                        <p class="user__name" onclick="window.location.href = '{{ route('myprofile') }}' ;">
+                            {{$like->user->name }}</p>
+                        @else
+                        <p class="user__name"
+                            onclick="window.location.href = '{{ route('Profile-follow',$like->user->id) }}' ;">
+                            {{$like->user->name }}</p>
+                        @endif
                     </li>
-                    @endforeach --}}
+                    @endforeach
+                    @else
+                    <li>
+                        <p class="user__name">No likes Yet</p>
+                    </li>
+                    @endif
                 </ul>
             </div>
         </div>
 
         <div class="comments">
             <p>{{ $counter_comment }} Comment </p>
-            <div class="comments-container" style="display: none;">
+            {{-- <div class="comments-container" style="display: none;">
                 <ul>
                     {{-- <li>
                         <p class="user__name">Amr Khaled</p> gamd
                     </li> --}}
-                </ul>
-            </div>
+                    {{-- </ul>
+            </div> --}}
         </div>
     </div>
     <div class="thinking__line"></div>
@@ -31,20 +44,20 @@
 
         @if ($like_btn==true)
         <div wire:click="insert_like" class="like" style="color: red" id="like-reaction">
-        <i class='bx bxs-like'></i>
+            <i class='bx bxs-like'></i>
             <p class="like">like</p>
         </div>
         @endif
 
         @if ($like_btn==false)
         <div wire:click="insert_like" class="like" id="like-reaction">
-        <i class='bx bxs-like'></i>
+            <i class='bx bxs-like'></i>
             <p class="like">like</p>
         </div>
         @endif
         {{-- ################################################################################### --}}
         <div class="post comment-box">
-        <i class='bx bxs-comment-detail'></i>
+            <i class='bx bxs-comment-detail'></i>
             <a class="post comment-box" href="{{route('getComments',$post_id)}}">Comment</a>
         </div>
     </div>

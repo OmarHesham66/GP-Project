@@ -5,13 +5,14 @@ namespace App\Http\Controllers\Workout;
 
 use App\Models\Muscle;
 use App\Trait\GetData;
+use App\Trait\GetDays;
 use App\Models\Exercise;
 use App\Trait\CheckSession;
+use App\Models\Notification;
 use Illuminate\Http\Request;
 use App\Trait\GetNotification;
 use App\Http\Controllers\Controller;
 use App\Classes\System\WorkoutSystem;
-use App\Trait\GetDays;
 use Illuminate\Support\Facades\Session;
 
 class WorkoutController extends Controller
@@ -48,21 +49,25 @@ class WorkoutController extends Controller
     }
     public function Plan_Workout()
     {
+        // return Notification::with('follow', 'sender', 'comment', 'replay', 'user', 'post')->where('user_id', '=', $this->get_session()->id)->get();
+
         $client = $this->get_session();
 
         $days = $this->get_session()->workout_days;
         $days = explode('-', $days);
-
+        // return $days;
         $sunday = $this->get_sunday($days);
         $saturday = $this->get_saturday($days);
         $monday = $this->get_monday($days);
         $tuesday = $this->get_tuesday($days);
         $wednesday = $this->get_wednesday($days);
         $thursday = $this->get_thursday($days);
+        // return $thursday;
         $friday = $this->get_friday($days);
 
         $workout_system = new WorkoutSystem($client, $days);
         $system_arr = $workout_system->Build();
+        // return $system_arr;
         $arr_number = $this->numbers_of_workout();
         return view('admin.Workout.workout', compact(
             'system_arr',

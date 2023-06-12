@@ -14,7 +14,7 @@ trait CreateNotificationByType
                 return Notification::create([
                     'user_id' => $notification_data['user_id'],
                     'data' => 'Commented To Your Post',
-                    'comment_id' => $notification_data['table_id'],
+                    'post_id' => $notification_data['table_id'],
                     'read_at' => now(),
                     'type' => $type,
                     'user_sender' => $notification_data['user_sender']
