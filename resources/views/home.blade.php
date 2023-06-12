@@ -26,7 +26,7 @@
         <div class="nav__menu" id="nav-menu">
             <ul class="nav__list">
                 <li class="nav__item">
-                    <a href="#home" class="nav__link active-link">home</a>
+                    <a href="#home" class="nav__link">home</a>
                 </li>
                 <li class="nav__item">
                     <a href="#program" class="nav__link">program</a>
@@ -35,7 +35,7 @@
                     <a href="#choose" class="nav__link">choose</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#pricing" class="nav__link">pricing</a>
+                    <a href="#calculate" class="nav__link">calculate</a>
                 </li>
 
                 <div class="nav__link">
@@ -111,11 +111,11 @@
                         <img src="{{asset('assets/img/program1.png')}}" alt="program image" class="program__img">
                     </div>
 
-                    <h3 class="program__title">Flex Muscle</h3>
+                    <h3 class="program__title">Home Dumbbell only or Bar only</h3>
 
                     <p class="program__description">
-                        Creating tension that's temporary making the muscle
-                        fibers smaller or contracted.
+                        If you busy and cannot go to gym ,and you have only dumbbells ,or only Bar in home<br>
+                        We got you.
                     </p>
 
                     <a href="#" class="program__button">
@@ -145,11 +145,10 @@
                         <img src="{{asset('assets/img/program3.png')}}" alt="program image" class="program__img">
                     </div>
 
-                    <h3 class="program__title">Basic Yoga</h3>
+                    <h3 class="program__title">Home without any equipments</h3>
 
                     <p class="program__description">
-                        Diaphragmatic this is the most common breathing
-                        technique you'll find in yoga.
+                        even if you have nothing to exercise with, don't care <br>We got you.
                     </p>
 
                     <a href="#" class="program__button">
@@ -162,11 +161,10 @@
                         <img src="{{asset('assets/img/program4.png')}}" alt="program image" class="program__img">
                     </div>
 
-                    <h3 class="program__title">Weight Lifting</h3>
+                    <h3 class="program__title">Gym Weight Lifting</h3>
 
                     <p class="program__description">
-                        Attempts a maximum weight single lift of a
-                        barbell loaded with weight plates.
+                        what ever you have days free,<br> We will personalize your workout days plan.
                     </p>
 
                     <a href="#" class="program__button">
@@ -183,7 +181,7 @@
             <div class="choose__container container grid">
                 <div class="choose__content">
                     <div class="section__data">
-                        <h2 class="section__subtitle">Best Reason</h2>
+                        <h2 class="section__subtitle">Best Reasons</h2>
                         <div class="section__titles">
                             <h1 class="section__title-border">WHY</h1>
                             <h1 class="section__title">CHOOSE US ?</h1>
@@ -191,26 +189,26 @@
                     </div>
 
                     <p class="choose__description">
-                        Choose your favorite class and start now. Remember the
+                        Choose your customized type of workout plans ,<br>and your nutrition system will be automatically generate. <br>Remember the
                         only bad workout is the one you didn't do.
                     </p>
 
                     <div class="choose__data">
                         <div class="choose__group">
-                            <h3 class="choose__number">200+</h3>
+                            <h3 class="choose__number">10k+</h3>
                             <p class="choose__subtitle">Total members</p>
                         </div>
                         <div class="choose__group">
+                            <h3 class="choose__number">+All type</h3>
+                            <p class="choose__subtitle">Flexibility</p>
+                        </div>
+                        <div class="choose__group">
                             <h3 class="choose__number">50+</h3>
-                            <p class="choose__subtitle">Best trainers</p>
+                            <p class="choose__subtitle">nutrition and workout Programs</p>
                         </div>
                         <div class="choose__group">
-                            <h3 class="choose__number">25+</h3>
-                            <p class="choose__subtitle">Programs</p>
-                        </div>
-                        <div class="choose__group">
-                            <h3 class="choose__number">100+</h3>
-                            <p class="choose__subtitle">Awards</p>
+                            <h3 class="choose__number">timeline</h3>
+                            <p class="choose__subtitle">Communication between users</p>
                         </div>
                     </div>
                 </div>
@@ -227,7 +225,7 @@
     </section>
 
     <!--==================== PRICING ====================-->
-    <section class="pricing section" id="pricing">
+    <!-- <section class="pricing section" id="pricing">
         <div class="container">
             <div class="section__data">
                 <h2 class="section__subtitle">Pricing</h2>
@@ -338,10 +336,10 @@
                 </article>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!--==================== CALCULATE ====================-->
-    <section class="calculate section">
+    <section class="calculate section" id="calculate">
         <div class="calculate__container container grid">
             <div class="calculate__content">
                 <div class="section__ titles">
