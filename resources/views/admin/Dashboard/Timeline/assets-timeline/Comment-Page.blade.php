@@ -125,7 +125,7 @@
                                     <div class="owner__container">
                                         <div class="owner__info">
                                             <div class="post__img">
-                                                <img src="{{asset('assets/img/favicon.png')}}" alt="">
+                                                <img src="{{asset('images/user-profile/'.$post->user->photo)}}" alt="">
                                             </div>
                                             <div class="owner__name">
                                                 <h1 class="user__name">{{$post->user->name}}</h1>
@@ -140,7 +140,7 @@
                                         <p>{{$post->text}}</p>
                                     </div>
                                     <div class="posts__img">
-                                        <img src="{{asset('assets/img/gymman.jpg')}}" alt="">
+                                        <img src="{{asset('images/Post-Image/'.$post->media)}}" alt="">
                                     </div>
                                     @livewire('like',['post_id'=>$post->id])
 
