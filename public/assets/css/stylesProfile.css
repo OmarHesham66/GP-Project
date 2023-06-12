@@ -207,7 +207,7 @@ img {
   position: relative;
   background-color: var(--body-color);
   transition: .4s;
-  padding-bottom: 300px;
+  padding-bottom: 400px;
 }
 
 .header {
