@@ -61,15 +61,10 @@
                                 <select class="input__password input__email" name="allergy[]" multiple="multiple"
                                     id="Allergy">
                                     <option>None</option>
-                                    <option>Milk</option>
+                                    <option>Dairy</option>
                                     <option>Eggs</option>
                                     <option>Peanuts</option>
-                                    <option>Tree nuts (such as almonds, cashews, walnuts)
-                                    </option>
                                     <option>Fish</option>
-                                    <option>Shellfish</option>
-                                    <option>Soy</option>
-                                    <option>Wheat</option>
                                 </select>
                             </div>
                         </div>

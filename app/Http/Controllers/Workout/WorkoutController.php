@@ -33,6 +33,17 @@ class WorkoutController extends Controller
             'exercise_level' =>    $req->exercise_level,
             'bodyfat' => $req->bodyfat,
         ]);
+        return view('admin.Registration.Workout-Register2');
+    }
+
+    public function insert_workout_data2(Request $req)
+    {
+
+        Session::put('data_workout2', [
+            'workout_place' => $req->workout_place,
+            'workout_days' =>  $req->workout_days,
+            'workout_tools' =>   $req->workout_tool,
+        ]);
         return view('admin.Registration.Nutrition-Register');
     }
     public function Plan_Workout()

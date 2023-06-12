@@ -20,6 +20,7 @@ class PostController extends Controller
     }
     public function storePost(Request $request)
     {
+        dd($request);
         $client = $_SESSION['client'];
         $request->validate([
             'text' => 'max:255',

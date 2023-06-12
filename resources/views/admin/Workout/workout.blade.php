@@ -73,7 +73,7 @@
             @for ($i=0;$i<$arr_number[$sys->Exercise_Name];$i++ )
               <div class="swiper-slide tranding-slide">
                 <div class="tranding-slide-img">
-                  <video controls src="{{ asset('workout/'.$sys->muscle[$i]->Muscle_Video) }}" alt="">
+                    <video controls src="{{ asset('workout/'.$sys->muscle[$i]->Muscle_Video) }}" alt=""></video>
                 </div>
                 <div class="tranding-slide-content">
                   <div class="tranding-slide-content-bottom">

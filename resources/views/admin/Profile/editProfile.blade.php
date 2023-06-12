@@ -27,10 +27,10 @@
                         <img src="{{ asset('images/user-profile/'.$client->photo) }}" alt="" class="nav__img">
                     </div>
 
-                    <a id="fileButton" class="follow__button">
+                    <a id="fileButton" name="media" class="follow__button">
                         Change Photo
                     </a>
-                    <input type="file" name="media" id="fileInput" style="display: none;">
+                    <input type="file" name="media" value="{{$client->photo}}" id="fileInput" style="display: none;">
                 </div>
 
                     <div>
@@ -119,11 +119,13 @@
 
         <!--=============== MAIN JS ===============-->
 {{--        <script src="{{asset('assets/js/signs.js')}}"></script>--}}
-        @error('password')
-    <div class="danger">
-        {{$message}}
-    </div>
-    @enderror
+        @if($errors->any())
+            @foreach($errors->all() as $error)
+            <div class="danger">
+                {{$error}}<br>
+            </div>
+             @endforeach
+        @endif
         <script src="{{asset('assets/js/create-post.js')}}"></script>
     </body>
 </html>

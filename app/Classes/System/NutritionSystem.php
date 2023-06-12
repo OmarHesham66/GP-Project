@@ -27,14 +27,14 @@ class NutritionSystem implements ISystem
         ];
 
         $meals = [
-            $this->nut->meal($macros, 1, new breakfast(), 'breakfast'),
-            $this->nut->meal($macros, 1, new Lunch(), 'lunch'),
-            $this->nut->meal($macros, 1, new Dinner(), 'dinner'),
+            $this->nut->meal($macros, 1, new breakfast(), 'breakfast',$this->client->allergy),
+            $this->nut->meal($macros, 1, new Lunch(), 'lunch',$this->client->allergy),
+            $this->nut->meal($macros, 1, new Dinner(), 'dinner',$this->client->allergy),
 
         ];
         $day_meals = [
             $meals,
-            $this->nut->snaks($meals, $macros, 1)
+            $this->nut->snaks($meals, $macros, 3,$this->client->allergy)
         ];
 
         return $day_meals;

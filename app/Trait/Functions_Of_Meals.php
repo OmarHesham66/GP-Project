@@ -165,9 +165,21 @@ trait Functions_Of_Meals
         $meal->fat = $units_meal->sum('fat');
         $meal->calories_meal = ($units_meal->sum('protein') * 4) + ($units_meal->sum('carb') * 4) + ($units_meal->sum('fat') * 9);
     }
-    public function snaks($meals, $macros, $id)
+    public function snaks($meals, $macros, $id,$allergy)
     {
-        $meal = Snak::find($id);
+        $arr=explode('-',$allergy);
+        $meal_count=Snak::get()->count();
+        for ($i=0;$i<$meal_count;$i++) {
+            $meal = Snak::find($id);
+            for ($j=$i;$j<count($arr);$j++) {
+                if ($meal->allergy != $arr[$j]) {
+                    break;
+                } else {
+                    $id++;
+
+                }
+            }
+        }
         $units_meal = $meal->compontent_meals;
 
         $full_protein = 0;
@@ -185,6 +197,7 @@ trait Functions_Of_Meals
         $fat_of_snak = $macros['fats'] - $full_fat;
         $calories = $macros['protein'] * 4 + $macros['carbs'] * 4 + $macros['fats'] * 9;
         $check_cals = $calories - $full_cals;
+        //dd([$check_cals,$meal->calories_meal]);
         if ($check_cals < $meal->calories_meal) {
             if ($carb_of_snak < $meal->carb) {
                 $this->culc_carb($meal, $units_meal, $carb_of_snak);
@@ -200,10 +213,10 @@ trait Functions_Of_Meals
                     ];
             }
         } else {
-            if ($carb_of_snak > $meal->carb) {
-                $this->culc_carb($meal, $units_meal, $carb_of_snak);
-            } elseif ($protein_of_snak > $meal->protein) {
+            if ($protein_of_snak > $meal->protein)  {
                 $this->culc_protein($meal, $units_meal, $protein_of_snak);
+            } elseif ($carb_of_snak > $meal->carb) {
+                $this->culc_carb($meal, $units_meal, $carb_of_snak);
             } else {
                 $this->culc_fat($meal, $units_meal, $fat_of_snak);
             }
@@ -212,8 +225,6 @@ trait Functions_Of_Meals
             [
                 'meal' => $meal->setHidden(['compontent_meals', 'created_at', 'updated_at']),
                 'compontent_meal' => $units_meal,
-
-
             ];
     }
 

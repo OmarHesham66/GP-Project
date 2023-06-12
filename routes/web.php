@@ -36,6 +36,7 @@ Route::group(['middleware' => 'Are_You_in_HomePage?'], function () {
         Route::get('/register', [UserController::class, 'email_register_show'])->name('email_register');
         Route::post('/register', [UserController::class, 'insert_email_data'])->name('register');
         Route::post('workout/register/data', [WorkoutController::class, 'insert_workout_data'])->name('workout');
+        Route::post('workout2/register/data', [WorkoutController::class, 'insert_workout_data2'])->name('workout2');
         Route::post('nutrition/register/data', [NitritionController::class, 'full_registration'])->name('nutrition');
     });
 });
