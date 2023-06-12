@@ -197,21 +197,34 @@ trait Functions_Of_Meals
         $fat_of_snak = $macros['fats'] - $full_fat;
         $calories = $macros['protein'] * 4 + $macros['carbs'] * 4 + $macros['fats'] * 9;
         $check_cals = $calories - $full_cals;
-        //dd([$check_cals,$meal->calories_meal]);
+
         if ($check_cals < $meal->calories_meal) {
-            if ($carb_of_snak < $meal->carb) {
-                $this->culc_carb($meal, $units_meal, $carb_of_snak);
-            } elseif ($protein_of_snak < $meal->protein) {
-                $this->culc_protein($meal, $units_meal, $protein_of_snak);
-            } else {
-                return
+            if($carb_of_snak<=0||$carb_of_snak > $meal->carb) {
+                    return
                     [
                         'meal' => $meal->setHidden(['compontent_meals', 'created_at', 'updated_at']),
                         'compontent_meal' => $units_meal,
 
 
                     ];
-            }
+                }
+                else {
+                    $this->culc_carb($meal, $units_meal, $carb_of_snak);
+                }
+
+//                else ($carb_of_snak < $meal->carb) {
+//                $this->culc_carb($meal, $units_meal, $carb_of_snak);
+//            } }if ($protein_of_snak < $meal->protein) {
+//                $this->culc_protein($meal, $units_meal, $protein_of_snak);
+//            } else {
+//                return
+//                    [
+//                        'meal' => $meal->setHidden(['compontent_meals', 'created_at', 'updated_at']),
+//                        'compontent_meal' => $units_meal,
+//
+//
+//                    ];
+//            }
         } else {
             if ($protein_of_snak > $meal->protein)  {
                 $this->culc_protein($meal, $units_meal, $protein_of_snak);

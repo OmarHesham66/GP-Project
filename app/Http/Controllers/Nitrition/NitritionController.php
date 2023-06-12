@@ -72,6 +72,9 @@ class NitritionController extends Controller
         } else {
             $gender = 0;
         }
+        if($data_workout2['workout_place']=='Gym'){
+            $data_workout2['workout_tools']=NULL;
+        }
         $arr = $data_workout2['workout_days'];
 
         $days = implode('-', $arr);

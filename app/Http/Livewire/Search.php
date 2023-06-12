@@ -16,7 +16,7 @@ class Search extends Component
     public function render()
     {
 
-        $users = User::where('name', 'LIKE',  $this->result . '%')->get();
+        $users = User::where('name', 'LIKE', '%'. $this->result . '%')->get();
         $you_user = $this->get_session()->id;
         if (collect($users)->isEmpty()) {
             $this->isfound = false;
@@ -35,7 +35,7 @@ class Search extends Component
             $this->isfound = false;
             $this->emit('search');
         } else {
-            $this->result = str_split($arrayOfName[0], 3)[0];
+            $this->result = $arrayOfName[0];
             $this->isfound = true;
             $this->emit('search');
         }
