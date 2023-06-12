@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Post;
+use App\Models\User;
 use App\Models\Comment;
 use Livewire\Component;
 use App\Trait\CheckSession;
@@ -15,7 +16,8 @@ class InputComment extends Component
     public $post_id;
     public function render()
     {
-        return view('livewire.input-comment');
+        $user = User::where('id', $this->get_session()->id)->first();
+        return view('livewire.input-comment', compact('user'));
     }
 
     public function insert_comment()
