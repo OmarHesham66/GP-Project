@@ -75,7 +75,7 @@ class ProfileController extends Controller
         $request->validate([
             'name' => ['required', 'max:255'],
             'phone' => ['required', 'min:11', 'numeric'],
-            'email' => ['required', 'max:255', 'unique:users,email'],
+            'email' => ['required', 'max:255'],
             'password' => ['required', 'min:8', 'max:16', 'confirmed'],
             'age' => ['required'],
             'media' => 'mimes:jpeg,png,jpg',
