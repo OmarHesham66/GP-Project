@@ -20,13 +20,16 @@ class PostController extends Controller
     }
     public function storePost(Request $request)
     {
-        dd($request);
+
         $client = $_SESSION['client'];
         $request->validate([
             'text' => 'max:255',
             'media' => 'mimes:mp4,mov,ogg,jpeg,png,jpg,gif',
         ]);
-        $file_name = $this->getFileName($request->media);
+        $file_name='Null';
+        if ($request->media){
+            $file_name = $this->getFileName($request->media);
+           }
         Post::create([
 
             'text' => $request->text,

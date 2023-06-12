@@ -20,7 +20,7 @@ class ProfileController extends Controller
         $client = $_SESSION['client'];
         $follow_data = $this->get_information_user($client->id);
         $posts = Post::where('user_id', '=', $client->id)->get();
-        $numOfPosts = Post::where('id', '=', $client->id)->get()->count();
+        $numOfPosts = Post::where('user_id', '=', $client->id)->get()->count();
         $isFound = true;
         if (collect($posts)->isEmpty()) {
             $isFound = false;
