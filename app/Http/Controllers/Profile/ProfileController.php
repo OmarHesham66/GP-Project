@@ -75,13 +75,15 @@ class ProfileController extends Controller
         $request->validate([
             'name' => ['required', 'max:255'],
             'phone' => ['required', 'min:11', 'numeric'],
-            'email' => ['required', 'max:255', 'unique:users,email'],
+            'email' => ['required', 'max:255'],
             'password' => ['required', 'min:8', 'max:16', 'confirmed'],
             'age' => ['required'],
             'media' => 'mimes:jpeg,png,jpg',
         ]);
-
-        $file_name = $this->editImageProfile($request->media);
+        $file_name='Profile-PNG-File.png';
+        if ($request->media) {
+            $file_name = $this->editImageProfile($request->media);
+        }
         $user = User::where('id', '=', $_SESSION['client']->id)->first();
         $user->update([
             'photo' => $file_name,
@@ -90,6 +92,6 @@ class ProfileController extends Controller
             'email' => $request->email,
             'age' => $request->age,
         ]);
-        return view('admin.Login.Login');
+        return redirect()->route('logout') ;
     }
 }
