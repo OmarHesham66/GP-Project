@@ -47,6 +47,7 @@ likeBtns.forEach(function (likeBtn) {
             //   likeParagraph.style.color = '';
             //   likeIcon.style.transform = '';
             isLiked = false;
+            likeIcon.style.transform = "rotateY(40deg)";
         } else {
             //   likeIcon.style.color = ' #ff0000';
             //   likeParagraph.style.color = ' #ff0000';
