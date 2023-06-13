@@ -2,11 +2,22 @@
 @section('style-user_profile')
 <link rel="stylesheet" href="{{asset('assets/css/stylesProfile.css')}}">
 <link href="{{ asset('assets/lightbox2-2.11.4/dist/css/lightbox.min.css') }}" rel="stylesheet" />
+<link href="{{asset('assets/lightbox2-2.11.4/dist/css/lightbox.min.css')}}" rel="stylesheet" />
+<link rel="stylesheet" href="{{asset('assets/css/stylesTimeline.css')}}">
+<link rel="stylesheet" href="{{asset('assets/css/stylesComment.css')}}">
 @endsection
 
-@section('user_profile')
 
-@livewire('change-follow-button',['main_id'=>$main_id])
+@section('user_profile')
+    <section class="section section__height container" id="home">
+        <!-- here i will put post and create post  -->
+        <div class="page__container">
+            @livewire('change-follow-button',['main_id'=>$main_id])
+            {{--        @include('admin.Dashboard.Timeline.assets-timeline.create-post')--}}
+            @include('admin.Dashboard.Timeline.assets-timeline.posts-timeline')
+        </div>
+    </section>
+
 
 @endsection
 
@@ -27,7 +38,7 @@
     Livewire.emit('notify')
   });
 
- 
+
 </script>
 
 
