@@ -38,7 +38,7 @@
                     <h2>posts</h2>
 
                 </a>
-                <a class="followers__count counter" href="{{route('following')}}">
+                <a class="followers__count counter" href="{{route('user_followers',$main_id)}}">
                     @if (!isset($data['num_followers']))
                     <h1>0</h1>
                     @else
@@ -46,7 +46,7 @@
                     @endif
                     <h2>followers</h2>
                 </a>
-                <a class="following__count counter" href="{{route('followers')}}">
+                <a class="following__count counter" href="{{route('user_following',$main_id)}}">
                     @if (!isset($data['num_following']))
                     <h1>0</h1>
                     @else
