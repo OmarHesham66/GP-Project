@@ -34,17 +34,19 @@
                 <h1>{{ $posts->count() }}</h1>
                 <h2>posts</h2>
 
-            </a>
-            <a class="followers__count counter" href="{{route('followers')}}">
-                @if (!isset($data['num_followers']))
+                </a>
+                <a class="followers__count counter" href="{{route('user_followers',$main_id)}}">
+                    @if (!isset($data['num_followers']))
+
                     <h1>0</h1>
                 @else
                     <h1>{{ $data['num_followers'] }}</h1>
-                @endif
-                <h2>followers</h2>
-            </a>
-            <a class="following__count counter" href="{{route('following')}}">
-                @if (!isset($data['num_following']))
+                    @endif
+                    <h2>followers</h2>
+                </a>
+                <a class="following__count counter" href="{{route('user_following',$main_id)}}">
+                    @if (!isset($data['num_following']))
+
                     <h1>0</h1>
                 @else
                     <h1>{{ $data['num_following'] }}</h1>
