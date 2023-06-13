@@ -14,9 +14,8 @@
             @else
             <section class="user" onclick="window.location.href = '{{ route('Profile-follow',$user->id) }}' ;">
                 @endif
-                <img src="{{asset('assets/img/gymman.jpg')}}">
+                <img src="{{asset('images/user-profile/'.$user->photo)}}">
                 <h2>{{$user->name}}</h2>
-                <p>Web Developer</p>
                 {{-- <button>Follow</button> --}}
             </section>
             @endforeach
