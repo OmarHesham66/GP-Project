@@ -58,13 +58,13 @@ class client extends Status
     {
         switch ($this->goal) {
             case 'Lose Fat':
-                $mycal = $this->calories_with_ActivityRate - 500;
+                $mycal = $this->calories_with_ActivityRate - 200;
                 $this->my_real_calories = $mycal;
                 $this->LoseFat($mycal);
                 break;
 
             case 'Build muscle':
-                $mycal = $this->calories_with_ActivityRate + 500;
+                $mycal = $this->calories_with_ActivityRate + 300;
                 $this->my_real_calories = $mycal;
                 $this->BuildMuscle($mycal);
                 break;
