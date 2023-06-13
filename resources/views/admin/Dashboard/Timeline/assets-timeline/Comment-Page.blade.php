@@ -98,7 +98,7 @@
                                         {{-- <a href="{{route('logout')}}" class="nav-link">Logout</a>--}}
                                         {{-- </li>--}}
                                     {{-- </ul>--}}
-                                <a href="#" class="header__logo">
+                                <a href="{{route('dashboard')}}" class="header__logo">
                                     <img src="{{asset('assets/img/favicon.png')}}" alt="logo">
                                     <p>FitnessFuelX</p>
                                 </a>
