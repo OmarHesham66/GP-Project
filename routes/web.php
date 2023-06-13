@@ -57,7 +57,6 @@ Route::group(['middleware' => 'Are_You_Login?'], function () {
         Route::get('get/comments/{id}', [PostController::class, 'getComments'])->name('getComments');
         Route::get('get/search', [PostController::class, 'showsearch'])->name('search');
         Route::get('delete/post/{id}', [PostController::class, 'delete_post'])->name('delete-post');
-
     });
 
 
@@ -79,6 +78,8 @@ Route::group(['middleware' => 'Are_You_Login?'], function () {
 
         Route::get('/main', [DashboardController::class, 'show_dashboard'])->name('dashboard');
         Route::get('/profile/{id}', [UserProfileController::class, 'show_profile'])->name('Profile-follow');
+        Route::get('/following/{id}', [UserProfileController::class, 'user_following'])->name('user_following');
+        Route::get('/followers/{id}', [UserProfileController::class, 'user_followers'])->name('user_followers');
     });
 
     Route::group(['prefix' => 'status'], function () {
@@ -92,7 +93,4 @@ Route::group(['middleware' => 'Are_You_Login?'], function () {
         Route::get('followers', [ProfileController::class, 'follower'])->name('followers');
         Route::get('following', [ProfileController::class, 'following'])->name('following');
     });
-        });
-
-
-
+});
