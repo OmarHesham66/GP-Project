@@ -38,25 +38,26 @@ const scrollHeader = () =>{
     window.addEventListener('scroll', scrollHeader)
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-const sections = document.querySelectorAll('section[id')
+// const sections = document.querySelectorAll('section[id]')
 
-const scrollActive = () =>{
-    const scrollY = window.pageYOffset
+// const scrollActive = () => {
+//   const scrollY = window.pageYOffset
 
-    sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight,
-                sectionTop = current.offsetTop - 58,
-                sectionId = current.getAttribute('id'),
-                sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
-        
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            sectionsClass.classList.add('active-link')
-        }else{
-            sectionsClass.classList.remove('active-link')
-        }      
-    })
-}
-window.addEventListener('scroll', scrollActive)
+//   sections.forEach((current) => {
+//     const sectionHeight = current.offsetHeight,
+//       sectionTop = current.offsetTop - 58,
+//       sectionId = current.getAttribute('id'),
+//       sectionsClass = document.querySelector('.nav__menu a[href*="' + sectionId + '"]')
+
+//     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+//       sectionsClass.classList.add('active-link')
+//     } else {
+//       sectionsClass.classList.remove('active-link')
+//     }
+//   })
+// }
+
+// window.addEventListener('scroll', scrollActive)
 
 /*=============== SHOW SCROLL UP ===============*/ 
 const scrollUp = () =>{
@@ -77,10 +78,11 @@ const sr = ScrollReveal({
 })
 
 sr.reveal(`.home__data, .footer__container, .footer__group`)
-sr.reveal(`.home__img`, {delay: 700, origin: 'bottom'})
+sr.reveal(`.home__img, .calculate__img`, {delay: 700, origin: 'bottom'})
 sr.reveal(`.logos__img, .program__card, .pricing__card`, {interval: 100})
-sr.reveal(`.choose__img ,calculate__content`, {origin: 'left'})
-sr.reveal(`.choose__content, .calculate.img`, {origin: 'right'})
+sr.reveal(`.choose__img , .calculate__content`, {origin: 'left'})
+sr.reveal(`.choose__content`, {origin: 'right'})
+sr.reveal(`.calculate__img`, {delay: 700, origin: 'right'})
 
 /*=============== CALCULATE JS ===============*/
 const calculateForm = document.getElementById( 'calculate-form'),

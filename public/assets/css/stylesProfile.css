@@ -207,6 +207,8 @@ img {
   position: relative;
   background-color: var(--body-color);
   transition: .4s;
+  min-height: 100vh;
+  max-height: auto;
 }
 
 .header {
