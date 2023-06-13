@@ -14,13 +14,13 @@ use App\Trait\GetData_UserProfileFollow;
 class UserProfileController extends Controller
 {
     use GetData_UserProfileFollow;
-
-
     public function show_profile($main_id)
     {
+        $posts = Post::where('user_id', '=', $main_id)->get();
         return view('admin.Profile.userProfile', with([
             'main_id' => $main_id,
-            'client' => $_SESSION['client']
+            'client' => $_SESSION['client'],
+            'posts'=>$posts
         ]));
     }
 
